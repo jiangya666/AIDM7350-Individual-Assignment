@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../Css/login.css" />
+  </head>
+  <body>
+    <div class="bgImg">
+      <div class="loginBox">
+        <p class="title">Login</p>
+        <div class="text">
+          <div class="account">
+            &nbsp;&nbsp;Account ：
+            <input
+              type="text"
+              placeholder=" input account"
+              class="text-2"
+              id="account"
+            />
+          </div>
+          <div class="account">
+            Password：
+            <input
+              type="password"
+              placeholder="password"
+              class="text-3"
+              id="password"
+            />
+          </div>
+          <div class="free">
+            <button id="login">login</button>
+          </div>
+          <div class="register">
+            <a href="#"><span>Free registration</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var account = 123456;
+    var password = 123456;
+    let loginbtn = document.getElementById("login");
+    loginbtn.addEventListener("click", function () {
+      let acctext = document.getElementById("account").value;
+      let passtext = document.getElementById("password").value;
+      if (account != acctext) {
+        alert("The account does not exist!");
+        return;
+      }
+      if (passtext != password) {
+        alert("Password incorrect!");
+        return;
+      }
+      alert("Login successful!");
+      location.href = "index.html";
+    });
+  </script>
+</html>
